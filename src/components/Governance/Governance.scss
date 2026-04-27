@@ -1,0 +1,140 @@
+@use '../../styles/variables' as *;
+
+.governance-section {
+    background-color: #ffffff;
+    padding: 6rem 2rem;
+    font-family: $font-sans;
+
+    .gov-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        align-items: flex-start;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+    }
+
+    .gov-left {
+        .gov-header {
+            margin-bottom: 2rem;
+
+            .gov-subtitle {
+                color: #c9b48c; // Gold/beige color
+                font-size: 0.8rem;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            .gov-title {
+                font-family: $font-serif;
+                font-size: 2.8rem;
+                font-weight: 400;
+                color: #222222;
+                line-height: 1.2;
+                margin-bottom: 1.5rem;
+
+                em {
+                    font-style: italic;
+                }
+            }
+
+            .gov-divider {
+                width: 40px;
+                height: 1.5px;
+                background-color: #c9b48c;
+            }
+        }
+
+        .gov-description {
+            margin-bottom: 3rem;
+
+            p {
+                color: #5a5a5a;
+                font-size: 1rem;
+                line-height: 1.6;
+                margin: 0;
+            }
+        }
+
+        .gov-committees {
+            display: flex;
+            gap: 1rem;
+
+            .committee-card {
+                flex: 1;
+                border: 2px solid #f0eadd; // Light beige border
+                padding: 1.5rem 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                min-width: 0;
+
+                .committee-icon {
+                    color: #c9b48c;
+                    margin-bottom: 0.8rem;
+                }
+
+                span {
+                    font-size: 0.75rem;
+                    color: #4a4a4a;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .gov-right {
+        .board-header {
+            margin-bottom: 2rem;
+
+            .board-subtitle {
+                color: #c9b48c;
+                font-size: 0.8rem;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                display: block;
+                margin-top: 5px; // To slightly align with the left side baseline
+            }
+        }
+
+        .board-list {
+            display: flex;
+            flex-direction: column;
+
+            .board-item {
+                padding: 1.5rem 0;
+                border-bottom: 1px solid #f0f0f0;
+
+                &:first-child {
+                    padding-top: 0;
+                }
+
+                h3 {
+                    font-family: $font-serif;
+                    font-size: 1.3rem;
+                    color: #222222;
+                    margin: 0 0 0.5rem 0;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-family: $font-sans;
+                    font-size: 0.85rem;
+                    color: #5a5a5a;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

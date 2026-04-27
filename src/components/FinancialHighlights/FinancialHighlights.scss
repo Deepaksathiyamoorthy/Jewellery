@@ -1,0 +1,115 @@
+@use '../../styles/variables' as *;
+
+.financial-highlights {
+    background-color: #ffffff;
+    padding: 6rem 2rem;
+    font-family: $font-sans;
+
+    .financial-container {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        font-family: $font-serif;
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #222222;
+        margin-bottom: 4rem;
+    }
+
+    .stats-grid {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5rem;
+        gap: 2rem;
+
+        .stat-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .stat-val {
+                font-family: $font-serif;
+                font-size: 3rem;
+                font-weight: 400;
+                color: #c9b48c; // Gold color
+                margin-bottom: 0.5rem;
+            }
+
+            .stat-label {
+                font-size: 0.8rem;
+                font-weight: 600;
+                color: #c9b48c;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+        }
+    }
+
+    .stock-ticker-card {
+        background-color: #fcfbf9; // extremely light beige/white
+        border: 1px solid #c9b48c; // gold border
+        padding: 2rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+
+        .exchange-label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #c9b48c;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .ticker-row {
+            display: flex;
+            align-items: baseline;
+            gap: 1.5rem;
+
+            .ticker-symbol {
+                font-family: $font-serif;
+                font-size: 3.5rem;
+                font-weight: 600;
+                color: #222222;
+            }
+
+            .ticker-price {
+                font-size: 1.25rem;
+                font-weight: 500;
+                color: #222222;
+            }
+
+            .ticker-change {
+                font-size: 0.95rem;
+                font-weight: 600;
+                color: #3b9c48; // Green positive color
+                display: flex;
+                align-items: center;
+                gap: 0.25rem;
+
+                .triangle-up {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .stats-grid {
+            flex-wrap: wrap;
+
+            .stat-card {
+                width: calc(50% - 1rem);
+                margin-bottom: 2rem;
+            }
+        }
+
+        .stock-ticker-card .ticker-row {
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    }
+}

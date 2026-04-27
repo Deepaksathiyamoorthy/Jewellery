@@ -1,0 +1,59 @@
+@use '../../styles/variables' as *;
+
+.investors-page {
+    background-color: #000000;
+}
+
+.investors-hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('../../assets/assets/elegant-diamond-ring-in-artistic-setting-1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    .investors-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+        z-index: 1;
+    }
+
+    .investors-content {
+        position: relative;
+        z-index: 2;
+        padding: 0 4rem;
+        max-width: 800px;
+    }
+
+    .investors-divider {
+        width: 60px;
+        height: 1.5px;
+        background-color: #c9b48c; // Gold color
+        margin-bottom: 2rem;
+    }
+
+    .investors-title {
+        font-family: $font-serif;
+        font-size: 3.5rem;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 1rem;
+    }
+
+    .investors-description {
+        font-family: $font-sans;
+        font-size: 1.15rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        .investors-content {
+            padding: 0 2rem;
+        }
+    }
+}

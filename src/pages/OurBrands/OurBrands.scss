@@ -1,0 +1,134 @@
+@use '../../styles/variables' as *;
+
+.brands-page {
+    background-color: #000000;
+}
+
+.brands-hero {
+    position: relative;
+    min-height: 100vh;
+    // We assume the user has or will provide a brands-hero.png in public folder
+    background-image: url('../../assets/assets/confident-individual-in-orange-jacket-2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    .brands-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4); // Dark overlay to ensure text readability
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 100%);
+        z-index: 1;
+    }
+
+    .brands-content {
+        position: relative;
+        z-index: 2;
+        padding: 0 4rem; // Aligned with the left padding
+        max-width: 800px;
+        margin-top: 5rem;
+    }
+
+    .brands-divider {
+        width: 60px;
+        height: 1.5px;
+        background-color: #c9b48c; // Gold color
+        margin-bottom: 2rem;
+    }
+
+    .brands-title {
+        font-family: $font-serif;
+        font-size: 3.5rem;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+    }
+
+    .brands-description {
+        font-family: $font-sans;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.6;
+        margin-bottom: 4rem;
+        max-width: 600px;
+    }
+
+    .brands-stats {
+        display: flex;
+        gap: 4rem;
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+
+            .stat-number {
+                font-family: $font-serif;
+                font-size: 2.2rem;
+                color: #c9b48c; // Gold color
+                margin-bottom: 0.5rem;
+            }
+
+            .stat-label {
+                font-family: $font-sans;
+                font-size: 0.75rem;
+                color: #ffffff;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                opacity: 0.8;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .brands-content {
+            padding: 0 2rem;
+        }
+
+        .brands-stats {
+            flex-wrap: wrap;
+            gap: 2rem;
+
+            .stat-item {
+                width: calc(50% - 2rem);
+            }
+        }
+    }
+}
+
+.brand-quote {
+    background-color: #030303;
+    padding: 10rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .quote-divider {
+        width: 60px;
+        height: 1px;
+        background-color: #c9b48c; // Gold color
+        margin: 2.5rem 0;
+    }
+
+    .quote-text {
+        font-family: $font-serif;
+        font-size: 2.5rem;
+        font-weight: 400;
+        font-style: italic;
+        color: #ffffff;
+        line-height: 1.4;
+        max-width: 800px;
+        margin: 0;
+    }
+
+    @media (max-width: 768px) {
+        padding: 5rem 2rem;
+
+        .quote-text {
+            font-size: 1.8rem;
+        }
+    }
+}

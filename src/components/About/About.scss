@@ -1,0 +1,128 @@
+@use '../../styles/variables' as *;
+
+.about {
+    background-color: #ffffff;
+    padding: 8rem 0;
+
+    &-container {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        gap: 6rem;
+        align-items: center;
+    }
+
+    &-left {
+        flex: 1;
+        padding-right: 1rem;
+    }
+
+    &-subtitle {
+        font-family: $font-sans;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: $color-gold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 2rem;
+    }
+
+    &-title {
+        font-family: $font-serif;
+        font-size: 2.8rem;
+        font-weight: 400;
+        line-height: 1.25;
+        color: #111111;
+        margin-bottom: 1.5rem;
+
+        .italic {
+            font-style: italic;
+        }
+    }
+
+    &-divider {
+        width: 60px;
+        height: 1px;
+        background-color: $color-gold;
+        margin-bottom: 2.5rem;
+    }
+
+    &-description {
+        font-family: $font-sans;
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: #4a4a4a;
+        margin-bottom: 2rem;
+        font-weight: 400;
+    }
+
+    &-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: $font-sans;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: $color-gold;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-top: 1rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $color-gold-hover;
+        }
+
+        .arrow {
+            font-size: 1.2rem;
+        }
+    }
+
+    &-right {
+        flex: 1;
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 2px;
+        background-color: #ffffff; // Creates the white borders
+    }
+
+    .grid-item {
+        background-color: #fdfaf6; // Specific subtle beige tone
+        padding: 5rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .grid-number {
+        font-family: $font-serif;
+        font-size: 2.5rem;
+        font-weight: 400;
+        color: #111111;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: flex-start;
+
+        span {
+            font-size: 1.2rem;
+            font-family: $font-sans;
+            color: #999999;
+            margin-left: 0.1rem;
+            font-weight: 300;
+        }
+    }
+
+    .grid-label {
+        font-family: $font-sans;
+        font-size: 0.85rem;
+        color: #555555;
+        font-weight: 500;
+    }
+}

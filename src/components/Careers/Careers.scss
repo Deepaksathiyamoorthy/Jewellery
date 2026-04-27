@@ -1,0 +1,95 @@
+@use '../../styles/variables' as *;
+
+.careers {
+    position: relative;
+    min-height: 600px;
+    background-image: url('/careers-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+
+    &-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+        z-index: 1;
+    }
+
+    &-container {
+        position: relative;
+        z-index: 2;
+        max-width: $max-width;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 4rem;
+    }
+
+    &-content {
+        max-width: 500px;
+    }
+
+    &-subtitle {
+        font-family: $font-sans;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: $color-gold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1.5rem;
+    }
+
+    &-title {
+        font-family: $font-serif;
+        font-size: 3.2rem;
+        font-weight: 400;
+        color: $color-text-light;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+
+        .italic {
+            font-style: italic;
+        }
+    }
+
+    &-divider {
+        width: 60px;
+        height: 1px;
+        background-color: rgba(194, 159, 89, 0.5);
+        margin-bottom: 2rem;
+    }
+
+    &-description {
+        font-family: $font-sans;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 2.5rem;
+    }
+
+    &-button {
+        background-color: $color-gold;
+        color: $color-text-light;
+        font-family: $font-sans;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $color-gold-hover;
+        }
+
+        .arrow {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+    }
+}

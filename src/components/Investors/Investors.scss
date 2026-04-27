@@ -1,0 +1,170 @@
+@use '../../styles/variables' as *;
+
+.investors {
+    background-color: #030303;
+    padding: 8rem 0;
+    color: $color-text-light;
+
+    &-container {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    &-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    &-subtitle {
+        font-family: $font-sans;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: $color-gold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 1rem;
+    }
+
+    &-title {
+        font-family: $font-serif;
+        font-size: 2.8rem;
+        font-weight: 400;
+        margin-bottom: 1.5rem;
+    }
+
+    &-divider {
+        width: 60px;
+        height: 1px;
+        background-color: rgba(194, 159, 89, 0.4);
+        margin: 0 auto;
+    }
+
+    &-stats {
+        display: flex;
+        justify-content: space-between;
+        background-color: #111111;
+        padding: 4rem 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .stat-item {
+        flex: 1;
+        text-align: center;
+
+        .stat-value {
+            font-family: $font-serif;
+            font-size: 3.5rem;
+            font-weight: 400;
+            color: $color-gold;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            span {
+                font-family: $font-sans;
+                font-size: 1.8rem;
+                margin-top: 0.5rem;
+                margin-left: 0.2rem;
+            }
+        }
+
+        .stat-label {
+            font-family: $font-sans;
+            font-size: 0.8rem;
+            color: $color-gold;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+        }
+
+        .stat-sublabel {
+            font-family: $font-sans;
+            font-size: 0.85rem;
+            color: #999999;
+        }
+    }
+
+    &-ticker {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid rgba(194, 159, 89, 0.4); // Thin gold border
+        padding: 2.5rem 3rem;
+        background-color: #050505;
+
+        .ticker-info {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .ticker-symbols {
+            display: flex;
+            flex-direction: column;
+
+            .exchange {
+                font-family: $font-sans;
+                font-size: 0.65rem;
+                color: #888888;
+                letter-spacing: 0.15em;
+                margin-bottom: 0.2rem;
+            }
+
+            .symbol {
+                font-family: $font-serif;
+                font-size: 2.8rem;
+                font-weight: 400;
+                color: #ffffff;
+                line-height: 1;
+            }
+        }
+
+        .ticker-price {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding-top: 1rem;
+
+            .current {
+                font-family: $font-sans;
+                font-size: 1.25rem;
+                font-weight: 400;
+                color: #eeeeee;
+            }
+
+            .change {
+                font-family: $font-sans;
+                font-size: 0.85rem;
+                font-weight: 500;
+                color: #2ecc71;
+            }
+        }
+
+        .ticker-button {
+            background-color: $color-gold;
+            color: $color-text-light;
+            font-family: $font-sans;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            border: none;
+            padding: 1rem 2.5rem;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: $color-gold-hover;
+            }
+
+            .arrow {
+                font-size: 1.1rem;
+                line-height: 1;
+            }
+        }
+    }
+}

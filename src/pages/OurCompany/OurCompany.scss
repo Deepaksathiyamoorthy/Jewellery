@@ -1,0 +1,54 @@
+@use '../../styles/variables' as *;
+
+.company-page {
+    background-color: #f7f7f7;
+}
+
+.company-hero {
+    position: relative;
+    min-height: 100vh;
+    background-image: url('/company-hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    .company-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        z-index: 1;
+    }
+
+    .company-content {
+        position: relative;
+        z-index: 2;
+        padding: 0 2rem;
+        max-width: 800px;
+    }
+
+    .company-divider {
+        width: 60px;
+        height: 1.5px;
+        background-color: $color-gold;
+        margin: 0 auto 1.5rem;
+    }
+
+    .company-title {
+        font-family: $font-serif;
+        font-size: 4.5rem;
+        font-weight: 400;
+        color: #ffffff;
+        margin-bottom: 1.5rem;
+    }
+
+    .company-description {
+        font-family: $font-sans;
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.95);
+        line-height: 1.7;
+    }
+}

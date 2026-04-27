@@ -1,0 +1,101 @@
+@use '../../styles/variables' as *;
+
+.mission-vision {
+    background-color: #ffffff;
+    padding: 6rem 2rem;
+    font-family: $font-sans;
+
+    .mv-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        align-items: flex-start;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+    }
+
+    .mv-left {
+        .mv-header {
+            margin-bottom: 3rem;
+
+            .mv-subtitle {
+                color: #c9b48c; // Gold/beige color from image
+                font-size: 0.8rem;
+                font-weight: 600;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            .mv-title {
+                font-family: $font-serif;
+                font-size: 2.8rem;
+                font-weight: 400;
+                color: #222222;
+                line-height: 1.2;
+                margin-bottom: 1.5rem;
+
+                em {
+                    font-style: italic;
+                }
+            }
+
+            .mv-divider {
+                width: 40px;
+                height: 1.5px;
+                background-color: #c9b48c;
+            }
+        }
+
+        .mv-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .mv-card {
+                background-color: #fbf9f6; // Light beige/off-white background
+                padding: 2rem 2.5rem;
+                border-left: 2px solid #e1d3bc;
+
+                .card-title {
+                    color: #c9b48c;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    margin-top: 0;
+                    margin-bottom: 1rem;
+                }
+
+                .card-text {
+                    color: #4a4a4a;
+                    font-size: 1.05rem;
+                    line-height: 1.6;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .mv-right {
+        padding-top: 2rem; // Aligns the text with the title
+
+        p {
+            color: #5a5a5a;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 0;
+            margin-bottom: 1.8rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

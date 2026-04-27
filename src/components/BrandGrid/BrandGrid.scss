@@ -1,0 +1,171 @@
+@use '../../styles/variables' as *;
+
+.brand-grid-section {
+    background-color: #ffffff;
+    padding: 6rem 2rem;
+
+    .brand-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        border-top: 1px solid #e0e0e0;
+        border-left: 1px solid #e0e0e0;
+        max-width: 1400px;
+        margin: 0 auto;
+
+        @media (max-width: 1200px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .brand-card {
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid #e0e0e0;
+        border-bottom: 1px solid #e0e0e0;
+
+        .brand-header {
+            background-color: #f4f3f0; // Light beige/gray background
+            padding: 1.5rem 1.5rem 3rem 1.5rem;
+            position: relative;
+            text-align: center;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .brand-badge {
+                position: absolute;
+                top: 1.5rem;
+                right: 1.5rem;
+                font-size: 0.65rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                padding: 0.25rem 0.5rem;
+                border: 1px solid;
+                border-radius: 2px;
+                background-color: transparent;
+
+                &.badge-luxury {
+                    color: #c9b48c;
+                    border-color: #c9b48c;
+                }
+
+                &.badge-mass {
+                    color: #8da488; // Muted green
+                    border-color: #8da488;
+                }
+
+                &.badge-bridal {
+                    color: #d19a9a; // Muted pink
+                    border-color: #d19a9a;
+                }
+
+                &.badge-digital {
+                    color: #889ec4; // Muted blue
+                    border-color: #889ec4;
+                }
+            }
+
+            .brand-name {
+                font-family: $font-serif;
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: #222222;
+                margin: 0;
+                position: relative;
+                top: 1rem;
+            }
+        }
+
+        .brand-body {
+            background-color: #ffffff;
+            padding: 2.5rem 2rem 2rem 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+
+            .brand-subtitle {
+                font-family: $font-serif;
+                font-size: 1.05rem;
+                font-style: italic;
+                color: #c9b48c;
+                margin: 0 0 1rem 0;
+                line-height: 1.4;
+            }
+
+            .brand-divider {
+                width: 100%;
+                height: 1px;
+                background-color: #f0f0f0;
+                margin-bottom: 1.5rem;
+            }
+
+            .brand-description {
+                font-family: $font-sans;
+                font-size: 0.85rem;
+                color: #5a5a5a;
+                line-height: 1.6;
+                margin: 0 0 2rem 0;
+                flex-grow: 1;
+            }
+
+            .brand-stats {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+
+                .stat-col {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    &.stat-right {
+                        align-items: flex-end;
+                        text-align: right;
+                    }
+
+                    .stat-title {
+                        font-family: $font-sans;
+                        font-size: 0.65rem;
+                        font-weight: 600;
+                        color: #999999;
+                        letter-spacing: 0.05em;
+                        text-transform: uppercase;
+                    }
+
+                    .stat-val {
+                        font-family: $font-sans;
+                        font-size: 0.85rem;
+                        font-weight: 600;
+                        color: #222222;
+                    }
+                }
+            }
+
+            .visit-brand-btn {
+                background: transparent;
+                border: 1px solid #c9b48c;
+                color: #c9b48c;
+                width: 100%;
+                padding: 1rem;
+                font-family: $font-sans;
+                font-size: 0.75rem;
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    background-color: #c9b48c;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

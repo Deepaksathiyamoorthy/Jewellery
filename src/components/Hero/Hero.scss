@@ -1,0 +1,89 @@
+@use '../../styles/variables' as *;
+
+.hero {
+    position: relative;
+    height: calc(100vh - 86px); // approximate height of navbar
+    min-height: 600px;
+    background-image: url('/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.2); // slight darkening to ensure text stands out over the image
+    }
+
+    &-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        padding: 0 2rem;
+    }
+
+    &-subtitle {
+        font-family: $font-sans;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: $color-gold;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        margin-bottom: 2rem;
+    }
+
+    &-title {
+        font-family: $font-serif;
+        font-size: 4.5rem;
+        font-weight: 400;
+        line-height: 1.1;
+        color: $color-text-light;
+        margin-bottom: 1.5rem;
+    }
+
+    &-description {
+        font-family: $font-sans;
+        font-size: 1.05rem;
+        font-weight: 500;
+        line-height: 1.6;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 2rem;
+    }
+
+    &-divider {
+        width: 50px;
+        height: 2px;
+        background-color: $color-gold;
+        margin: 0 auto 2rem;
+    }
+
+    &-button {
+        background-color: $color-gold;
+        color: $color-text-light;
+        font-family: $font-sans;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        border: none;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: $color-gold-hover;
+        }
+
+        .arrow {
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+    }
+}

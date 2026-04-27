@@ -1,0 +1,127 @@
+@use '../../styles/variables' as *;
+
+.timeline-section {
+    background-color: #050505; // Matches the dark theme from the image
+    padding: 8rem 2rem;
+    font-family: $font-sans;
+    color: #ffffff;
+
+    // Add subtle visual separation if needed, but the design is completely black.
+
+    .timeline-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .timeline-header {
+        text-align: center;
+        margin-bottom: 6rem;
+
+        .timeline-subtitle {
+            color: #c9b48c; // Gold/beige
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-title {
+            font-family: $font-serif;
+            font-size: 2.8rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .timeline-divider {
+            width: 60px;
+            height: 1px;
+            background-color: #c9b48c;
+            margin: 0 auto;
+        }
+    }
+
+    .timeline-track-container {
+        position: relative;
+        padding-top: 1rem; // Space for the line
+    }
+
+    .timeline-line {
+        position: absolute;
+        top: 6px; // Center aligning with the node dots
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: rgba(201, 180, 140, 0.3); // Faded gold line
+        z-index: 1;
+    }
+
+    .timeline-nodes {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+
+        .timeline-node {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            .node-point {
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background-color: #c9b48c;
+                margin-bottom: 2rem;
+            }
+
+            .node-content {
+                padding: 0 1rem;
+
+                .node-year {
+                    font-family: $font-serif;
+                    color: #c9b48c;
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    margin: 0 0 1.5rem 0;
+                }
+
+                .node-title {
+                    font-family: $font-sans;
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    color: #ffffff;
+                    margin: 0 0 1rem 0;
+                    line-height: 1.4;
+                }
+
+                .node-desc {
+                    font-family: $font-sans;
+                    font-size: 0.8rem;
+                    color: #aaaaaa;
+                    margin: 0;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        .timeline-nodes {
+            flex-direction: column;
+            gap: 4rem;
+
+            .timeline-line {
+                width: 1px;
+                height: 100%;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+            }
+        }
+    }
+}

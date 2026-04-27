@@ -1,0 +1,41 @@
+@use '../../styles/variables' as *;
+
+.navbar {
+    background-color: $color-bg-navbar;
+    padding: 1.5rem 0;
+
+    &-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 4rem;
+    }
+
+    &-logo {
+        font-family: $font-serif;
+        font-size: 2.2rem;
+        font-weight: 400;
+        color: $color-text-light;
+        letter-spacing: 0.02em;
+    }
+
+    &-links {
+        display: flex;
+        gap: 2.5rem;
+
+        li a {
+            font-family: $font-sans;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            color: $color-text-nav;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: $color-text-nav-hover;
+            }
+        }
+    }
+}

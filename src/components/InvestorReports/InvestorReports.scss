@@ -1,0 +1,140 @@
+@use '../../styles/variables' as *;
+
+.investor-reports-wrapper {
+    background-color: #faf9f6; // Very light off-white background
+    padding: 6rem 0;
+    font-family: $font-sans;
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .section-title {
+        font-family: $font-serif;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #222222;
+        margin-bottom: 2rem;
+
+        &.left-aligned {
+            text-align: left;
+        }
+    }
+
+    .section-header.centered {
+        text-align: center;
+        margin-bottom: 3rem;
+
+        .section-title {
+            margin-bottom: 1rem;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background-color: #c9b48c;
+            margin: 0 auto;
+        }
+    }
+
+    .reports-section {
+        margin-bottom: 6rem;
+    }
+
+    // Common card styles
+    .report-card {
+        background-color: #ffffff;
+        border: 1px solid #e1d5c1; // Light gold/beige border
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        height: 100%; // ensures they're the same height in grid
+
+        .icon {
+            color: #c9b48c;
+            margin-bottom: 1.5rem;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        h3 {
+            font-family: $font-serif;
+            font-size: 1.5rem;
+            color: #222222;
+            font-weight: 500;
+            margin: 0 0 0.5rem 0;
+        }
+
+        p {
+            font-size: 0.95rem;
+            color: #666666;
+            margin: 0 0 2rem 0;
+            line-height: 1.5;
+            flex-grow: 1; // Pushes button to bottom
+        }
+
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-bottom: 2rem;
+            flex-grow: 1; // Pushes button to bottom
+
+            span {
+                font-size: 0.95rem;
+                color: #666666;
+            }
+        }
+
+        .view-report-btn {
+            background-color: transparent;
+            border: 1px solid #e1d5c1;
+            color: #c9b48c;
+            font-family: $font-sans;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            padding: 1rem;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                background-color: #c9b48c;
+                color: #ffffff;
+                border-color: #c9b48c;
+            }
+        }
+    }
+
+    // Grids
+    .reports-grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        @media (max-width: 900px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 600px) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .reports-grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
