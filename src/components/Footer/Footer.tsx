@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './Footer.scss';
 
 const Footer = () => {
@@ -6,7 +7,9 @@ const Footer = () => {
             <div className="footer-container">
 
                 <div className="footer-brand">
-                    <h2 className="footer-logo">Jewellery</h2>
+                    <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                        <h2 className="footer-logo">Jewellery</h2>
+                    </Link>
                     <p className="footer-description">
                         A global leader in jewelry retail. We own and operate a portfolio of beloved brands that connect with customers at every stage of life.
                     </p>
